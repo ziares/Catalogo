@@ -26,23 +26,26 @@
             flex-grow: 1;
         }
 
-        /* ----- Galería ----- */
+       /* ----- Galería ----- */
         .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem; /* gap-4 */
-            padding: 1.5rem; /* p-6 */
-            background-color: #f3f4f6; /* bg-gray-100 */
+            display: flex;                       /* 🔄 Cambiado: de grid a flex para más control visual */
+            flex-wrap: wrap;
+            justify-content: center;            /* Centra las imágenes horizontalmente */
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: #f3f4f6;
         }
 
         /* ----- Imagenes ----- */
         .product-image {
-            width: 100%;           /* Se adapta al ancho de la celda */
-            aspect-ratio: 1 / 1;   /* Mantiene proporción cuadrada uniforme */
-            height: auto;          /* La altura se calcula automáticamente */
-            object-fit: contain;   /* Muestra la imagen completa sin recortar */
-            background-color: #e5e7eb; /* Lugar para imágenes con transparencia */
-            border-radius: 0.5rem; /* rounded-lg */
+            width: 100%;             /* Se adapta al ancho de su contenedor */
+            max-width: 280px;        /* 🔧 NUEVO: limita el tamaño máximo de cada imagen */
+            aspect-ratio: auto;      /* 🔄 Cambiado: deja que cada imagen conserve su proporción original */
+            height: auto;
+            object-fit: contain;
+            background-color: #e5e7eb;
+            border-radius: 0.5rem;
+            margin: 0 auto;          /* 🔧 Centra las imágenes dentro de su celda */
         }
 
         h1, h2, h3 {
