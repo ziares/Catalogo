@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for better presentation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .product-card {
+            background-color: #ffffff; /* bg-white */
+            border: 1px solid #e5e7eb; /* border-gray-200 */
+            border-radius: 0.75rem; /* rounded-xl */
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .product-content {
+            padding: 1.5rem; /* p-6 */
+            flex-grow: 1;
+        }
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem; /* gap-4 */
+            padding: 1.5rem; /* p-6 */
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+        .product-image{
+        width:100%;
+        height:auto;          /* ← deja que la imagen defina su altura          */
+        max-height:280px;     /* ← límite opcional para que no crezca demasiado */
+        object-fit:contain;   /* ← muestra la imagen completa, sin recortes     */
+        background:#e5e7eb;
+        border-radius:0.5rem;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        .price {
+            color: #ec4899; /* text-pink-500 */
+            font-weight: 700;
+        }
+        .category-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700;
+            border-bottom: 3px solid #f9a8d4; /* border-pink-300 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">CATÁLOGO DE PRODUCTOS</h1>
+            <p class="text-lg text-gray-600">Nuestra colección más reciente, organizada para ti.</p>
+        </header>
+
+        <!-- Category: MORRALES Y CARTERAS -->
+        <section id="morrales-carteras" class="mb-16">
+            <h2 class="category-title">Morrales y Carteras</h2>
+            
+            <!-- Product: MORRAL DE CUERO -->
+            <div class="product-card mb-12">
+                <div class="product-content">
+                    <h3 class="text-2xl mb-2">Morral de Cuero</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $24.000</p>
+                    <p class="mb-4">Un clásico atemporal. Este morral de cuero sintético texturizado es elegante y versátil. Cuenta con una solapa con broche magnético y un distintivo aplique metálico en 'D'. Su interior forrado y su correa ajustable lo hacen el compañero ideal para tu día a día.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Medidas:</strong> 13 cm de alto x 20 cm de ancho.</li>
+                        <li><strong>Material:</strong> Cuero sintético de alta calidad.</li>
+                        <li><strong>Colores:</strong> Negro, gris, suela, rosa, nude, beige.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/D.jpg" alt="Morral de cuero negro" class="product-image"transformar: rotar(90g)>
+                    <img src= "IMG/dgris.jpg"Morral de cuero gris" class="product-image">
+                    <img src= "IMG/dmarron.jpg" alt="Morral de cuero color suela" class="product-image">
+                    <img src="IMG/drosa.jpg" alt="Morral de cuero rosa" class="product-image">
+                    <img src="IMG/dbeige.jpg" alt="Morral de cuero color nude" class="product-image">
+                    <img src="IMG/drosainterior.jpg" alt="Vista interior del morral de cuero" class="product-image">
+                </div>
+            </div>
+            <!-- Product: CARTERA MORRAL PORTA CELULAR -->
+            <div class="product-card mb-12">
+                 <div class="product-content">
+                    <h3 class="text-2xl price mb-4">Cartera Morral Porta Celular</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $24.000</p>
+                    <p class="mb-4">Diseño moderno y funcional. Esta cartera tipo morral presenta un elegante matelaseado y una cadena decorativa. Con dos compartimentos principales con cierre, es ideal para llevar tu celular y otros esenciales de forma segura.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Medidas:</strong> 12 cm de alto x 20 cm de largo.</li>
+                        <li><strong>Material:</strong> Cuero sintético.</li>
+                        <li><strong>Colores:</strong> Rosa, negro, gris, beige, suela, lila, blanco, fucsia.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/cadenarosabb.jpg" alt="Cartera morral porta celular rosa" class="product-image">
+                    <img src="IMG/cadenang.jpg" alt="Cartera morral porta celular negra" class="product-image">
+                    <img src="IMG/cadenablanca.jpg" alt="Cartera morral porta celular gris" class="product-image">
+                    <img src="IMG/cadenafucsia.jpg" alt="Cartera morral porta celular beige" class="product-image">
+                </div>
+            </div>
+            
+            <!-- Product: MORRAL CON STRASS -->
+            <div class="product-card mb-12">
+                 <div class="product-content">
+                    <h3 class="text-2xl mb-2">Morral con Strass</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $33.800</p>
+                    <p class="mb-4">¡Añade un toque de brillo a tu look! Este morral se destaca por su cubierta completa de strass y viene con un monedero a juego. Su correa ancha y ajustable le da un toque urbano y chic.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Medidas:</strong> 13 cm de alto x 21 cm de largo.</li>
+                        <li><strong>Incluye:</strong> Monedero desmontable.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/strass.jpg" width = "border-pink-300" height="border-pink-300" alt="Morral con strass tornasolado y monedero" class="product-image">
+                    <img src="IMG/strassfrente.jpg" alt="Morral con strass plateado y monedero" class="product-image">
+                    <img src="IMG/strassinterior.jpg" alt="Vista interior del morral con strass" class="product-image">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Category: BOLSOS Y MOCHILAS -->
+        <section id="bolsos-mochilas" class="mb-16">
+            <h2 class="category-title">Bolsos y Mochilas</h2>
+
+            <!-- Product: BOLSO DEPORTIVO "PINK" -->
+            <div class="product-card mb-12">
+                <div class="product-content">
+                    <h3 class="text-2xl mb-2">Bolso Deportivo "PINK"</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $36.000</p>
+                    <p class="mb-4">Perfecto para el gimnasio o una escapada. Este bolso deportivo cuenta con la palabra "PINK" en lentejuelas, correas personalizadas y un práctico compartimento separado para zapatillas, manteniendo todo organizado y limpio.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Medidas:</strong> 30 cm de alto x 45 cm de largo.</li>
+                        <li><strong>Características:</strong> Compartimento para zapatillas.</li>
+                        <li><strong>Colores:</strong> Lila, celeste, fucsia, rosa, negro.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/pinkvioleta.jpg" alt="Bolso deportivo PINK color lila" class="product-image">
+                    <img src="IMG/pinkceleste.jpg" alt="Bolso deportivo PINK color celeste" class="product-image">
+                    <img src="IMG/pinkfucsia.jpg" alt="Bolso deportivo PINK color fucsia" class="product-image">
+                    <img src="IMG/pinkrosa.jpg" alt="Bolso deportivo PINK color rosa" class="product-image">
+                    <img src="IMG/pinkng.jpg" alt="Bolso deportivo PINK color negro" class="product-image">
+                </div>
+            </div>
+
+            <!-- Product: MOCHILA IMPERMEABLE GRANDE -->
+            <div class="product-card mb-12">
+                <div class="product-content">
+                    <h3 class="text-2xl mb-2">Mochila Impermeable Grande</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $38.000</p>
+                    <p class="mb-4">Compañera ideal para todos los días. Esta mochila de tela de avión impermeable es liviana y resistente. Cuenta con múltiples bolsillos frontales y un monedero a juego. Sus tiras traseras son ajustables para máximo confort.</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Medidas:</strong> 38 cm de alto x 30 cm de ancho.</li>
+                        <li><strong>Material:</strong> Tela de avión impermeable.</li>
+                        <li><strong>Colores:</strong> Celeste, rosa.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/mochiceleste.jpg" alt="Mochila impermeable celeste con monedero" class="product-image">
+                    <img src="IMG/celesteatras.jpg" alt="Mochila impermeable rosa con monedero" class="product-image">
+                    <img src="IMG/rosa.jpg" alt="Vista trasera de la mochila impermeable" class="product-image">
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- Category: ACCESORIOS -->
+        <section id="accesorios" class="mb-16">
+            <h2 class="category-title">Accesorios</h2>
+
+            <!-- Product: NECESER "WASHBAG" -->
+            <div class="product-card mb-12">
+                <div class="product-content">
+                    <h3 class="text-2xl mb-2">Neceser "WASHBAG"</h3>
+                    <p class="text-xl price mb-2">GRANDE: $11.000</p>
+                    <p class="text-xl price mb-4">MEDIANO: $9.000</p>
+                    <p class="mb-4">Organiza tus cosméticos y artículos de aseo con estilo. Estos neceseres transparentes de PVC son impermeables y fáciles de limpiar, perfectos para viajar o para el uso diario. Disponibles en dos tamaños.</p>
+                     <ul class="list-disc list-inside">
+                        <li><strong>Medida Grande:</strong> 21 cm de alto x 30 cm de largo.</li>
+                        <li><strong>Medida Mediano:</strong> 15 cm de alto x 26 cm de largo.</li>
+                        <li><strong>Colores:</strong> Negro, rosa, blanco.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/neceserng.jpg" alt="Neceser grande WASHBAG" class="product-image">
+                    <img src="IMG/necesergrande.jpg" alt="Neceser grande en rosa" class="product-image">
+                    <img src="IMG/necesermediano.jpg" alt="Neceser mediano WASHBAG en tres colores" class="product-image">
+                </div>
+            </div>
+            
+            <!-- Product: LONCHERA TERMICA -->
+             <div class="product-card mb-12">
+                <div class="product-content">
+                    <h3 class="text-2xl mb-2">Lonchera Térmica</h3>
+                    <p class="text-2xl price mb-4">PRECIO: $21.000 - $23.000</p>
+                    <p class="mb-4">Mantén tus alimentos frescos por más tiempo con estas prácticas loncheras térmicas. Confeccionadas en tela de avión, cuentan con un interior de aluminio que conserva la temperatura y una correa ajustable.</p>
+                     <ul class="list-disc list-inside">
+                        <li><strong>Medidas Aprox:</strong> 19 cm de alto x 26 cm de ancho.</li>
+                        <li><strong>Material:</strong> Tela de avión e interior térmico.</li>
+                        <li><strong>Colores:</strong> Fucsia, negro, gris, azul.</li>
+                    </ul>
+                </div>
+                <div class="product-gallery">
+                    <img src="IMG/termicarosa.jpg" alt="Lonchera térmica fucsia" class="product-image">
+                    <img src="IMG/termicang.jpg" alt="Lonchera térmica gris" class="product-image">
+                    <img src="IMG/azultermica.jpg" alt="Lonchera térmica azul" class="product-image">
+                    <img src="IMG/ngtermica.jpg" alt="Vista interior de la lonchera térmica" class="product-image">
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+</body>
+</html>

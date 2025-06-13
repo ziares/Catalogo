@@ -1,0 +1,61 @@
+    
+        /* ----- Ajustes globales ----- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        .container {
+            max-width: 1200px;
+        }
+
+        /* ----- Tarjeta de producto ----- */
+        .product-card {
+            background-color: #ffffff; /* bg-white */
+            border: 1px solid #e5e7eb; /* border-gray-200 */
+            border-radius: 0.75rem; /* rounded-xl */
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .product-content {
+            padding: 1.5rem; /* p-6 */
+            flex-grow: 1;
+        }
+
+        /* ----- Galería ----- */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem; /* gap-4 */
+            padding: 1.5rem; /* p-6 */
+            background-color: #f3f4f6; /* bg-gray-100 */
+        }
+
+        /* ----- Imagenes ----- */
+        .product-image {
+            width: 100%;           /* Se adapta al ancho de la celda */
+            aspect-ratio: 1 / 1;   /* Mantiene proporción cuadrada uniforme */
+            height: auto;          /* La altura se calcula automáticamente */
+            object-fit: contain;   /* Muestra la imagen completa sin recortar */
+            background-color: #e5e7eb; /* Lugar para imágenes con transparencia */
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        .price {
+            color: #ec4899; /* text-pink-500 */
+            font-weight: 700;
+        }
+        .category-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700;
+            border-bottom: 3px solid #f9a8d4; /* border-pink-300 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
