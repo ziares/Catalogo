@@ -1,64 +1,64 @@
-    
-        /* ----- Ajustes globales ----- */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb; /* bg-gray-50 */
-        }
-        .container {
-            max-width: 1200px;
-        }
 
-        /* ----- Tarjeta de producto ----- */
-        .product-card {
-            background-color: #ffffff; /* bg-white */
-            border: 1px solid #e5e7eb; /* border-gray-200 */
-            border-radius: 0.75rem; /* rounded-xl */
-            overflow: hidden;
-            transition: box-shadow 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-        }
-        .product-card:hover {
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-        .product-content {
-            padding: 1.5rem; /* p-6 */
-            flex-grow: 1;
-        }
+/* ----- Ajustes globales ----- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb; /* bg-gray-50 */
+}
+.container {
+    max-width: 1200px;
+}
 
-       /* ----- Galería ----- */
-        .product-gallery {
-            display: flex;                       /* 🔄 Cambiado: de grid a flex para más control visual */
-            flex-wrap: wrap;
-            justify-content: center;            /* Centra las imágenes horizontalmente */
-            gap: 1rem;
-            padding: 1.5rem;
-            background-color: #f3f4f6;
-        }
+/* ----- Tarjeta de producto ----- */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.product-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
 
-        /* ----- Imagenes ----- */
-        .product-image {
-            width: 100%;             /* Se adapta al ancho de su contenedor */
-            max-width: 280px;        /* 🔧 NUEVO: limita el tamaño máximo de cada imagen */
-            aspect-ratio: auto;      /* 🔄 Cambiado: deja que cada imagen conserve su proporción original */
-            height: auto;
-            object-fit: contain;
-            background-color: #e5e7eb;
-            border-radius: 0.5rem;
-            margin: 0 auto;          /* 🔧 Centra las imágenes dentro de su celda */
-        }
+/* ----- Galería ----- */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f3f4f6;
+}
 
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-        .price {
-            color: #ec4899; /* text-pink-500 */
-            font-weight: 700;
-        }
-        .category-title {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 700;
-            border-bottom: 3px solid #f9a8d4; /* border-pink-300 */
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
-        }
+/* ----- Imagenes ----- */
+.product-image {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;        /* Proporción cuadrada uniforme */
+    height: auto;
+    object-fit: cover;          /* Recorta para que todas se vean igual de grandes */
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+.price {
+    color: #ec4899;
+    font-weight: 700;
+}
+.category-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    border-bottom: 3px solid #f9a8d4;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
